@@ -1,0 +1,42 @@
+.zeedogEn{
+    background: #fa7b24;
+    display: inline-block;
+    color: #fff;
+    width: 50%;
+}
+
+p{
+    line-height: 1.5;
+}
+
+p.text{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+h2{
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.4em;
+    margin-bottom: 0;
+    max-width: 370px;
+    margin: 0 auto;
+}
+
+
+button{
+    background: transparent;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    cursor: pointer;
+}
+
+button img{
+    max-width: 300px !important;
+    width: 100%;
+}
