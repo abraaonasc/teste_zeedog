@@ -1,39 +1,34 @@
-.component_Pt  {
-    background: #23b2e3;
+.component_En  {
+    background: #fa7b24;
     width: 100%;
     transition: 200ms;
 }
 
-.component_Pt .zeedogPt {
+.component_En .zeedogEn {
     width: 100%;
     transition: 200ms;
 }
 
-.component_Pt .btn-return {
+.component_En .btn-return {
     margin: 0;
     max-width: 120px;
     width: 100%;
     height: 74;
 }
 
-.component_Pt  p.text:nth-child(1) {
+
+.component_En .ptActive {
     display: none;
 }
 
-
-.component_Pt .ptActive {
-    display: none;
-}
-
-.component_Pt .dropDown {
+.component_En .dropDown {
    display: block;
 }
 
-.component_Pt .dropDown img{
+.component_En .dropDown img{
     display: block;
     margin: 0 auto;
     max-width: 538px;
-    width: 100%;
     height: 108px;
     cursor: pointer;
  }

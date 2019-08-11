@@ -37,6 +37,44 @@ button{
 }
 
 button img{
-    max-width: 300px !important;
+    max-width: 300px ;
     width: 100%;
 }
+
+@media screen and (max-width: 786px) {
+    .zeedogEn{
+        width: 100%;
+    }
+    
+    .zeedogEn h2{
+        display: inline-block;
+        width: 80%;
+        font-size: 1.1em;
+        line-height: 20px;
+        margin-top: 4%;
+        padding: 0 10px;
+    }
+    .zeedogEn p.text:nth-child(1){
+        width: 20%;
+        display: inline-block;
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+        margin: 0;
+        padding: 15px 20px;
+    }
+
+    .zeedogEn p.text{
+        font-size: 1.0em;
+        margin-bottom: 0px;
+        margin-top: 40px;
+        display: block;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .zeedogEn a button img {
+        max-width: 170px ;
+        width: 100%;
+    }
+
+  }
