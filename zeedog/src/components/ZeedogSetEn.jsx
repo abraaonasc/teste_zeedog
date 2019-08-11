@@ -1,7 +1,7 @@
 import React , {Component} from 'react'
 import './ZeedogSetEn.css'
 import ZeedogEn from './ZeedogEn';
-import buttonBack from '../assets/img/return-btn.png'
+import buttonBack from '../assets/img/return-btn-en.png'
 import dropDown from '../assets/img/dropdown-balloon-pressed.png'
 import {Link} from 'react-router-dom'
 import axios from 'axios'

@@ -5,11 +5,11 @@
     width: 50%;
 }
 
-p{
+.zeedogEn p{
     line-height: 1.5;
 }
 
-p.text{
+.zeedogEn p.text{
     text-transform: uppercase;
     text-align: center;
     font-size: 1.1em;
@@ -17,7 +17,7 @@ p.text{
     margin-top: 40px;
 }
 
-h2{
+.zeedogEn h2{
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
@@ -28,7 +28,7 @@ h2{
 }
 
 
-button{
+.zeedogEn button{
     background: transparent;
     border: none;
     margin: 0 auto;
@@ -36,7 +36,7 @@ button{
     cursor: pointer;
 }
 
-button img{
+.zeedogEnbutton img{
     max-width: 300px ;
     width: 100%;
 }

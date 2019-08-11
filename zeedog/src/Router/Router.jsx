@@ -6,6 +6,7 @@ import {Switch , Route , Redirect} from 'react-router'
 import Home from '../components/Home'
 import ZeedogSet from '../components/ZeedogSet'
 import ZeedogSetEn from '../components/ZeedogSetEn'
+import Detalhe from '../components/Detalhe'
 
 
 export default props =>
@@ -13,5 +14,6 @@ export default props =>
         <Route exact path="/" component={Home}/>
         <Route exact path="/ZeedogPt" component={ZeedogSet} />
         <Route exact path="/ZeedogEn" component={ZeedogSetEn} />
+        <Route exact path="/Detalhe" component={Detalhe} />
         <Redirect from="*" to="/"></Redirect>
     </Switch>

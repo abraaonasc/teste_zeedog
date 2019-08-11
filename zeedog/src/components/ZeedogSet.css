@@ -21,12 +21,43 @@
 }
 
 
+.component_Pt .teste{
+    display: none;
+}
+
 .component_Pt .ptActive {
     display: none;
 }
 
 .component_Pt .dropDown {
    display: block;
+}
+
+.dropDown.show .teste {
+    display: block;
+    background: #fff;
+    color: #000;
+    max-width: 440px;
+    width: 100%;
+    margin: 0 auto;
+    height: 200px;
+    overflow: scroll;
+    padding: 15px 3px;
+ }
+
+ .dropDown.show .teste ul {
+    list-style: none;
+    padding: 0px;
+}
+
+ .dropDown.show .teste li {
+    list-style: none;
+    border-bottom: 1px solid #e4e4e4;
+    padding: .8em 0;
+    text-align: center;
+    color: #0071bc;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .component_Pt .dropDown img{
@@ -38,3 +69,8 @@
     cursor: pointer;
  }
 
+ @media screen and (max-width: 786px) {
+  .component_Pt  .zeedogPt h2{
+      display: block;
+  }
+ }
