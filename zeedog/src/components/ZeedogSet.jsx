@@ -6,37 +6,41 @@ import dropDown from '../assets/img/dropdown-balloon-pressed.png'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 
-const initialState = {
-    user :{raca: ''},
-    list:[]
-}
 
 
-export default class ZeedogSet extends Component{
-    state = {...initialState}
+class ZeedogSet extends Component {
+    constructor(props) {
+      super(props);  
+      this.state = {
+        list: [],
+      };
+  
+    //   this.onChange = this.onChange.bind(this);
+    }
 
-  componentWillMount(){
-    const baseUrl ="http://localhost:3002/raca";
-    axios(baseUrl).then(resp => {
-        console.log(resp.data)
-        this.setState({list: resp.data})
-        for (const raca in resp.data) {
-            if (resp.data.hasOwnProperty(raca)) {
-                const element = resp.data[raca];
-                var racaDom = element.pt_name
-                console.log(racaDom)
-            }
+    componentDidMount() {
+        this.renderBreed();
+    }
+      
+    renderBreed = async() => {
+        try {
+            let res = await axios.get('http://localhost:3002/raca');
+            let posts = res.data;
+            // this will re render the view with new data
+            this.setState({
+                list: Object.keys(posts).map((_) => posts[_]),
+            });
+        } catch (err) {
+            console.log(err);
         }
-    })
-   }
-
-
-   
-
-
-    renderTemp() {
+    }
+    render() {
+        const list = this.state.list || [];
+        console.group('Listas:')
+        console.log(list);
+        console.groupEnd();
         return(
-            <div className="component_Pt">
+        <div className="component_Pt">
             <Link to="/">
                 <button className="btn-return">
                     <img src={buttonBack} alt="ToBack"/>
@@ -46,29 +50,18 @@ export default class ZeedogSet extends Component{
             </ZeedogPt>
 
             <span className="dropDown">
-            
+
                 <img src={dropDown} alt="pressed"/>
                 <div className="teste">
                     <ul>
+                        {list.map(value => <li>{value.pt_name}</li>)}
                     </ul>
                 </div>
             </span>
                
             </div>
-        )
-   
+        );
     }
-
-
-  
-
-    render(){
-        return(
-            this.renderTemp()
-        )
-    } 
 }
 
-
-
-
+export default ZeedogSet;
